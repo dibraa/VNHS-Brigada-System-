@@ -1,6 +1,6 @@
 ﻿namespace BrigadaEskwela_SoftwareDevelopment_II
 {
-    partial class Form1
+    partial class FRM_View_EditRecord
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // FRM_View_EditRecord
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(1009, 492);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(183, 94);
+            this.Name = "FRM_View_EditRecord";
+            this.Text = "FRM_View_EditRecord";
+            this.TransparencyKey = System.Drawing.Color.White;
+            this.ResumeLayout(false);
+
         }
 
         #endregion
     }
 }
-

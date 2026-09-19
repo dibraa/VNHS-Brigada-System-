@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BrigadaEskwela_SoftwareDevelopment_II
 {
-    public partial class Form1 : Form
+    public partial class FRM_View_EditRecord : Form
     {
-        public Form1()
+        public FRM_View_EditRecord()
         {
             InitializeComponent();
         }

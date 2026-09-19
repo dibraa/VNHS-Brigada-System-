@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BrigadaEskwela_SoftwareDevelopment_II</RootNamespace>
     <AssemblyName>BrigadaEskwela_SoftwareDevelopment II</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,8 +34,28 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\Other Files\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,35 +67,488 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FRM_UtilityWithdrawal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FRM_UtilityWithdrawal.Designer.cs">
+      <DependentUpon>FRM_UtilityWithdrawal.cs</DependentUpon>
     </Compile>
+    <Compile Include="REPORT VIEWER\ExportFile_OrgDonations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="REPORT VIEWER\ExportFile_OrgDonations.Designer.cs">
+      <DependentUpon>ExportFile_OrgDonations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORT VIEWER\ExportRecord_OrgVolunteers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="REPORT VIEWER\ExportRecord_OrgVolunteers.Designer.cs">
+      <DependentUpon>ExportRecord_OrgVolunteers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORT VIEWER\ExportRecord_AllRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="REPORT VIEWER\ExportRecord_AllRecords.Designer.cs">
+      <DependentUpon>ExportRecord_AllRecords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORT VIEWER\ExportRecord_Donations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="REPORT VIEWER\ExportRecord_Donations.Designer.cs">
+      <DependentUpon>ExportRecord_Donations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORT VIEWER\ExportFileVolunteers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="REPORT VIEWER\ExportFileVolunteers.Designer.cs">
+      <DependentUpon>ExportFileVolunteers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_BrigadaManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_BrigadaManagement.Designer.cs">
+      <DependentUpon>FRM_BrigadaManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_ViewReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_ViewReports.Designer.cs">
+      <DependentUpon>FRM_ViewReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_ReportType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_ReportType.Designer.cs">
+      <DependentUpon>FRM_ReportType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Students\AddStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Students\AddStudent.Designer.cs">
+      <DependentUpon>AddStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_AboutUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_AboutUs.Designer.cs">
+      <DependentUpon>FRM_AboutUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_AcademicYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_AcademicYear.Designer.cs">
+      <DependentUpon>FRM_AcademicYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Records\FRM_AddRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Records\FRM_AddRecords.Designer.cs">
+      <DependentUpon>FRM_AddRecords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Campus Map\FRM_Building A.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Campus Map\FRM_Building A.Designer.cs">
+      <DependentUpon>FRM_Building A.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Campus Map\FRM_Building B.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Campus Map\FRM_Building B.Designer.cs">
+      <DependentUpon>FRM_Building B.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Campus Map\FRM_CampusMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Campus Map\FRM_CampusMap.Designer.cs">
+      <DependentUpon>FRM_CampusMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Dashboard.Designer.cs">
+      <DependentUpon>FRM_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Donations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Donations.Designer.cs">
+      <DependentUpon>FRM_Donations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Login.Designer.cs">
+      <DependentUpon>FRM_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Campus Map\FRM_PagcorBuilding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Campus Map\FRM_PagcorBuilding.Designer.cs">
+      <DependentUpon>FRM_PagcorBuilding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Reports.Designer.cs">
+      <DependentUpon>FRM_Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Students\FRM_StudentRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Students\FRM_StudentRegistration.Designer.cs">
+      <DependentUpon>FRM_StudentRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_TestDock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_TestDock.Designer.cs">
+      <DependentUpon>FRM_TestDock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Users.Designer.cs">
+      <DependentUpon>FRM_Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Records\FRM_ViewRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Records\FRM_ViewRecords.Designer.cs">
+      <DependentUpon>FRM_ViewRecords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Records\FRM_View-EditRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Records\FRM_View-EditRecord.Designer.cs">
+      <DependentUpon>FRM_View-EditRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="GlobalFilter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="_01_BrigadaEskwelaDBDataSet.cs">
+      <DependentUpon>_01_BrigadaEskwelaDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_01_BrigadaEskwelaDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_01_BrigadaEskwelaDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_01_BrigadaEskwelaDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_01_BrigadaEskwelaDBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FRM_UtilityWithdrawal.resx">
+      <DependentUpon>FRM_UtilityWithdrawal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORT VIEWER\ExportFile_OrgDonations.resx">
+      <DependentUpon>ExportFile_OrgDonations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORT VIEWER\ExportRecord_OrgVolunteers.resx">
+      <DependentUpon>ExportRecord_OrgVolunteers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORT VIEWER\ExportRecord_AllRecords.resx">
+      <DependentUpon>ExportRecord_AllRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORT VIEWER\ExportRecord_Donations.resx">
+      <DependentUpon>ExportRecord_Donations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORT VIEWER\ExportFileVolunteers.resx">
+      <DependentUpon>ExportFileVolunteers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_BrigadaManagement.resx">
+      <DependentUpon>FRM_BrigadaManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_ViewReports.resx">
+      <DependentUpon>FRM_ViewReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_ReportType.resx">
+      <DependentUpon>FRM_ReportType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Students\AddStudent.resx">
+      <DependentUpon>AddStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_AboutUs.resx">
+      <DependentUpon>FRM_AboutUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_AcademicYear.resx">
+      <DependentUpon>FRM_AcademicYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Records\FRM_AddRecords.resx">
+      <DependentUpon>FRM_AddRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Campus Map\FRM_Building A.resx">
+      <DependentUpon>FRM_Building A.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Campus Map\FRM_Building B.resx">
+      <DependentUpon>FRM_Building B.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Campus Map\FRM_CampusMap.resx">
+      <DependentUpon>FRM_CampusMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Dashboard.resx">
+      <DependentUpon>FRM_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Donations.resx">
+      <DependentUpon>FRM_Donations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Login.resx">
+      <DependentUpon>FRM_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Campus Map\FRM_PagcorBuilding.resx">
+      <DependentUpon>FRM_PagcorBuilding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Reports.resx">
+      <DependentUpon>FRM_Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Students\FRM_StudentRegistration.resx">
+      <DependentUpon>FRM_StudentRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_TestDock.resx">
+      <DependentUpon>FRM_TestDock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Users.resx">
+      <DependentUpon>FRM_Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Records\FRM_ViewRecords.resx">
+      <DependentUpon>FRM_ViewRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Records\FRM_View-EditRecord.resx">
+      <DependentUpon>FRM_View-EditRecord.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="Report1_Volunteers.rdlc" />
+    <EmbeddedResource Include="Report2_DonationsM.rdlc" />
+    <EmbeddedResource Include="Report3_AllRecords.rdlc" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="_01_BrigadaEskwelaDBDataSet.xsc">
+      <DependentUpon>_01_BrigadaEskwelaDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_01_BrigadaEskwelaDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_01_BrigadaEskwelaDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_01_BrigadaEskwelaDBDataSet.xss">
+      <DependentUpon>_01_BrigadaEskwelaDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_01_BrigadaEskwelaDBDataSet1.xsc">
+      <DependentUpon>_01_BrigadaEskwelaDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_01_BrigadaEskwelaDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_01_BrigadaEskwelaDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_01_BrigadaEskwelaDBDataSet1.xss">
+      <DependentUpon>_01_BrigadaEskwelaDBDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\topbar5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reports2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Records.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Records1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reports.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shutdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CARD-LONG-WHITE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Card1-blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Card2-red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Card2-red1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Card4-aqua.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Card4-darkBLlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Card3-purple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Card6-blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Card-WHITE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Card-BLUE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card-large blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OASIS LOGO BRIGADA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VNHS LOGO BRIGADA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Records2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Students.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add student.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QUADRANGLE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Card4-aqua1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Card6-blue1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MAP-PAGCOR 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MAP-BUILDING A-B2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MAP-TEMP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card-green2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card-green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card-red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CARD-LONG-WHITE1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\150 LOGINT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FRM_Donations\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\organization.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\management.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\management %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\management %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2807799_18174.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CardWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CardWhite1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CardWHITE-REPORTS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checked %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open-folder %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rec %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\438267598_2505029456336853_8979074437983678126_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\438231976_754486503466283_1038144263236758303_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\438293672_468447915555282_8660810304407150666_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\438232004_1268498740792220_7201605779611453073_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\438267742_454448333613445_5347505764933657587_n.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

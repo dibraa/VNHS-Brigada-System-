@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="_01_BrigadaEskwelaDBDataSet1" targetNamespace="http://tempuri.org/_01_BrigadaEskwelaDBDataSet1.xsd" xmlns:mstns="http://tempuri.org/_01_BrigadaEskwelaDBDataSet1.xsd" xmlns="http://tempuri.org/_01_BrigadaEskwelaDBDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="_01_BrigadaEskwelaDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="_01_BrigadaEskwelaDBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BrigadaEskwela_SoftwareDevelopment_II.Properties.Settings.GlobalReference.Default._01_BrigadaEskwelaDBConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VIEW_02_BrigadaVOLUNTEERS2TableAdapter" GeneratorDataComponentClassName="VIEW_02_BrigadaVOLUNTEERS2TableAdapter" Name="VIEW_02_BrigadaVOLUNTEERS2" UserDataComponentName="VIEW_02_BrigadaVOLUNTEERS2TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="_01_BrigadaEskwelaDBConnectionString (Settings)" DbObjectName="[01_BrigadaEskwelaDB].dbo.VIEW_02_BrigadaVOLUNTEERS2" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        StudentInformationID, Lname, Fname, Mname, Suffix, Gender, GradeLevel, LearnerStatus, FullName, Relationship, ContactNo, BrigadaType, VerifiedBy, DateVerified
+FROM            VIEW_02_BrigadaVOLUNTEERS2
+UNION
+SELECT        StudentInformationID, Lname, Fname, Mname, Suffix, Gender, GradeLevel, LearnerStatus, FullName, Relationship, ContactNo, BrigadaType, VerifiedBy, DateVerified
+FROM            View_03_BrigadaDONATIONS2</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="StudentInformationID" DataSetColumn="StudentInformationID" />
+              <Mapping SourceColumn="Lname" DataSetColumn="Lname" />
+              <Mapping SourceColumn="Fname" DataSetColumn="Fname" />
+              <Mapping SourceColumn="Mname" DataSetColumn="Mname" />
+              <Mapping SourceColumn="Suffix" DataSetColumn="Suffix" />
+              <Mapping SourceColumn="Gender" DataSetColumn="Gender" />
+              <Mapping SourceColumn="GradeLevel" DataSetColumn="GradeLevel" />
+              <Mapping SourceColumn="LearnerStatus" DataSetColumn="LearnerStatus" />
+              <Mapping SourceColumn="FullName" DataSetColumn="FullName" />
+              <Mapping SourceColumn="Relationship" DataSetColumn="Relationship" />
+              <Mapping SourceColumn="ContactNo" DataSetColumn="ContactNo" />
+              <Mapping SourceColumn="BrigadaType" DataSetColumn="BrigadaType" />
+              <Mapping SourceColumn="VerifiedBy" DataSetColumn="VerifiedBy" />
+              <Mapping SourceColumn="DateVerified" DataSetColumn="DateVerified" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="_01_BrigadaEskwelaDBDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="_01_BrigadaEskwelaDBDataSet1" msprop:Generator_UserDSName="_01_BrigadaEskwelaDBDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="VIEW_02_BrigadaVOLUNTEERS2" msprop:Generator_TableClassName="VIEW_02_BrigadaVOLUNTEERS2DataTable" msprop:Generator_TableVarName="tableVIEW_02_BrigadaVOLUNTEERS2" msprop:Generator_TablePropName="VIEW_02_BrigadaVOLUNTEERS2" msprop:Generator_RowDeletingName="VIEW_02_BrigadaVOLUNTEERS2RowDeleting" msprop:Generator_RowChangingName="VIEW_02_BrigadaVOLUNTEERS2RowChanging" msprop:Generator_RowEvHandlerName="VIEW_02_BrigadaVOLUNTEERS2RowChangeEventHandler" msprop:Generator_RowDeletedName="VIEW_02_BrigadaVOLUNTEERS2RowDeleted" msprop:Generator_UserTableName="VIEW_02_BrigadaVOLUNTEERS2" msprop:Generator_RowChangedName="VIEW_02_BrigadaVOLUNTEERS2RowChanged" msprop:Generator_RowEvArgName="VIEW_02_BrigadaVOLUNTEERS2RowChangeEvent" msprop:Generator_RowClassName="VIEW_02_BrigadaVOLUNTEERS2Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StudentInformationID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnStudentInformationID" msprop:Generator_ColumnPropNameInRow="StudentInformationID" msprop:Generator_ColumnPropNameInTable="StudentInformationIDColumn" msprop:Generator_UserColumnName="StudentInformationID" type="xs:int" minOccurs="0" />
+              <xs:element name="Lname" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLname" msprop:Generator_ColumnPropNameInRow="Lname" msprop:Generator_ColumnPropNameInTable="LnameColumn" msprop:Generator_UserColumnName="Lname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fname" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFname" msprop:Generator_ColumnPropNameInRow="Fname" msprop:Generator_ColumnPropNameInTable="FnameColumn" msprop:Generator_UserColumnName="Fname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Mname" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMname" msprop:Generator_ColumnPropNameInRow="Mname" msprop:Generator_ColumnPropNameInTable="MnameColumn" msprop:Generator_UserColumnName="Mname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Suffix" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSuffix" msprop:Generator_ColumnPropNameInRow="Suffix" msprop:Generator_ColumnPropNameInTable="SuffixColumn" msprop:Generator_UserColumnName="Suffix" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Gender" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnGender" msprop:Generator_ColumnPropNameInRow="Gender" msprop:Generator_ColumnPropNameInTable="GenderColumn" msprop:Generator_UserColumnName="Gender" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GradeLevel" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnGradeLevel" msprop:Generator_ColumnPropNameInRow="GradeLevel" msprop:Generator_ColumnPropNameInTable="GradeLevelColumn" msprop:Generator_UserColumnName="GradeLevel" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LearnerStatus" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLearnerStatus" msprop:Generator_ColumnPropNameInRow="LearnerStatus" msprop:Generator_ColumnPropNameInTable="LearnerStatusColumn" msprop:Generator_UserColumnName="LearnerStatus" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FullName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFullName" msprop:Generator_ColumnPropNameInRow="FullName" msprop:Generator_ColumnPropNameInTable="FullNameColumn" msprop:Generator_UserColumnName="FullName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Relationship" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRelationship" msprop:Generator_ColumnPropNameInRow="Relationship" msprop:Generator_ColumnPropNameInTable="RelationshipColumn" msprop:Generator_UserColumnName="Relationship" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ContactNo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnContactNo" msprop:Generator_ColumnPropNameInRow="ContactNo" msprop:Generator_ColumnPropNameInTable="ContactNoColumn" msprop:Generator_UserColumnName="ContactNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BrigadaType" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBrigadaType" msprop:Generator_ColumnPropNameInRow="BrigadaType" msprop:Generator_ColumnPropNameInTable="BrigadaTypeColumn" msprop:Generator_UserColumnName="BrigadaType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VerifiedBy" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnVerifiedBy" msprop:Generator_ColumnPropNameInRow="VerifiedBy" msprop:Generator_ColumnPropNameInTable="VerifiedByColumn" msprop:Generator_UserColumnName="VerifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DateVerified" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDateVerified" msprop:Generator_ColumnPropNameInRow="DateVerified" msprop:Generator_ColumnPropNameInTable="DateVerifiedColumn" msprop:Generator_UserColumnName="DateVerified" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
