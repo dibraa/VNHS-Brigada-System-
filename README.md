@@ -102,15 +102,6 @@ This project is an academic/legacy application and requires security hardening b
 - Enforce authorization at the data/service boundary, not only through UI visibility.
 - Protect student personal information and restrict report access.
 
-## Build and Test
-
-Build the solution from Visual Studio or with MSBuild on a machine that has the .NET Framework build tools installed:
-
-```powershell
-msbuild ".\BrigadaEskwela SoftwareDevelopment II.sln" /p:Configuration=Debug
-```
-
-There is currently no automated test project. Database-dependent behavior should be verified against a non-production SQL Server database.
 
 ## License
 
